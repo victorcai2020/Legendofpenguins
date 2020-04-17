@@ -61,11 +61,7 @@ class Player(pg.sprite.Sprite):
             self.shoot()
 
     def shoot(self):
-        self.shots = 0
-        self.shots =+ 1
         now = pg.time.get_ticks()
-        if self.weapon == 'shotgun' and self.shots == 10:
-            self.weapon = 'pistol'
         if now - self.last_shot > WEAPONS[self.weapon]['rate']:
             self.last_shot = now
             dir = vec(1, 0).rotate(-self.rot)
