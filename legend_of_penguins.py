@@ -6,11 +6,18 @@ from settings import *
 from sprites import *
 from tilemap import *
 
+def inplev():
+    print('1. lop.tmx')
+    print('2. lop2.tmx')
+    print('3. legofpengs.tmx')
+    print('4. easylop.tmx')
+    print('')
+    print('warning: make sure to enter <mapname>.tmx')
+    global inp
+    inp = input('enter level: ')
+
 def version():
     print('Legend of penguins version 1.3.8')
-    print('map versions:')
-    print('1.0.0')
-    print('accessible map')
 
 def sorry():
     print('sorry about the "game won" glitching. I an fixing it as soon as possible')
@@ -46,6 +53,8 @@ welcome()
 print('')
 print('story:')
 story()
+print('')
+inplev()
 
 # HUD functions
 def draw_player_health(surf, x, y, pct):
@@ -128,7 +137,7 @@ class Game:
         self.mobs = pg.sprite.Group()
         self.bullets = pg.sprite.Group()
         self.items = pg.sprite.Group()
-        self.map = TiledMap(path.join(self.map_folder, 'legofpengs.tmx'))
+        self.map = TiledMap(path.join(self.map_folder, inp))
         self.map_img = self.map.make_map()
         self.map.rect = self.map_img.get_rect()
         for tile_object in self.map.tmxdata.objects:
