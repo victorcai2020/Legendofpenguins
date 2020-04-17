@@ -47,7 +47,7 @@ WEAPONS['shotgun'] = {'bullet_speed': 400,
                       'rate': 1000,
                       'kickback': 300,
                       'spread': 0,
-                      'damage': 50,
+                      'damage': 300,
                       'bullet_size': 'xl',
                       'bullet_count': 1}
 
