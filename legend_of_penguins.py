@@ -5,6 +5,7 @@ from os import path
 from settings import *
 from sprites import *
 from tilemap import *
+from guizero import info
 
 def inplev():
     print('1. lop.tmx')
@@ -12,7 +13,7 @@ def inplev():
     print('3. legofpengs.tmx')
     print('4. easylop.tmx')
     print('')
-    print('warning: make sure to enter <mapname>.tmx')
+    print('WARNING: MAKE SURE to enter <mapname>.tmx')
     global inp
     inp = input('enter level: ')
 
