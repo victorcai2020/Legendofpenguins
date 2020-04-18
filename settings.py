@@ -90,7 +90,8 @@ BOB_RANGE = 10
 BOB_SPEED = 0.3
 
 # Sounds
-music = shuffle['Happy Tune.wav', 'The Last Encounter.ogg']
+music = ['Happy Tune.wav']
+shuffle(music)
 BG_MUSIC = music[0]
 PLAYER_HIT_SOUNDS = ['penguin_RIP 03.wav', 'penguin_RIP 02.wav']
 ZOMBIE_MOAN_SOUNDS = None
