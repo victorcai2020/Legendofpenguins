@@ -59,7 +59,14 @@ WEAPONS['pistol'] = {'bullet_speed': 500,
                       'damage': 60,
                       'bullet_size': 'lg',
                       'bullet_count': 1}
-
+WEAPONS['machine'] = {'bullet_speed': 500,
+                      'bullet_lifetime': 1000,
+                      'rate': 100,
+                      'kickback': 150,
+                      'spread': 5,
+                      'damage': 75,
+                      'bullet_size': 'lg',
+                      'bullet_count': 1}
 
 # Mob settings
 MOB_IMG = 'ManBlue_hold.png'
@@ -95,7 +102,8 @@ ITEMS_LAYER = 1
 ITEM_IMAGES = {'health': 'health_pack.png',
                'shotgun': 'hitpro.png',
                'pistol': 'hitpro.png',
-               'boomshot': 'hitpro.png'}
+               'boomshot': 'hitpro.png',
+               'machine':'hitpro.png'}
 HEALTH_PACK_AMOUNT = 62
 BOB_RANGE = 10
 BOB_SPEED = 0.3
@@ -109,6 +117,7 @@ ZOMBIE_MOAN_SOUNDS = None
 ZOMBIE_HIT_SOUNDS = ['pain/8.wav']
 WEAPON_SOUNDS = {'boomshot': ['pistol.wav'],
                  'rocket': ['shotgun.wav'],
-                 'pistol': ['pistol.wav']}
+                 'pistol': ['pistol.wav'],
+                 'machine': ['pistol.wav']}
 EFFECTS_SOUNDS = {'level_start': 'level_start.wav',
                   'health_up': 'health_pack.wav',}
