@@ -107,7 +107,8 @@ BG_MUSIC = music[0]
 PLAYER_HIT_SOUNDS = ['penguin_RIP 03.wav', 'penguin_RIP 02.wav']
 ZOMBIE_MOAN_SOUNDS = None
 ZOMBIE_HIT_SOUNDS = ['pain/8.wav']
-WEAPON_SOUNDS = {'pistol': ['pistol.wav'],
-                 'shotgun': ['shotgun.wav']}
+WEAPON_SOUNDS = {'boomshot': ['pistol.wav'],
+                 'rocket': ['shotgun.wav'],
+                 'pistol': ['pistol.wav']}
 EFFECTS_SOUNDS = {'level_start': 'level_start.wav',
                   'health_up': 'health_pack.wav',}
