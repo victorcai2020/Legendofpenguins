@@ -35,7 +35,7 @@ BARREL_OFFSET = vec(30, 0)
 # Weapon settings
 BULLET_IMG = 'bullet.png'
 WEAPONS = {}
-WEAPONS['pistol'] = {'bullet_speed': 500,
+WEAPONS['boomshot'] = {'bullet_speed': 500,
                      'bullet_lifetime': 500,
                      'rate': 1000,
                      'kickback': 200,
@@ -43,7 +43,7 @@ WEAPONS['pistol'] = {'bullet_speed': 500,
                      'damage': 5,
                      'bullet_size': 'lg',
                      'bullet_count': 50}
-WEAPONS['shotgun'] = {'bullet_speed': 400,
+WEAPONS['rocket'] = {'bullet_speed': 400,
                       'bullet_lifetime': 1000000,
                       'rate': 1000,
                       'kickback': 300,
@@ -51,6 +51,15 @@ WEAPONS['shotgun'] = {'bullet_speed': 400,
                       'damage': 300,
                       'bullet_size': 'xl',
                       'bullet_count': 1}
+WEAPONS['pistol'] = {'bullet_speed': 400,
+                      'bullet_lifetime': 1000000,
+                      'rate': 1000,
+                      'kickback': 300,
+                      'spread': 0,
+                      'damage': 300,
+                      'bullet_size': 'xl',
+                      'bullet_count': 1}
+
 
 # Mob settings
 MOB_IMG = 'ManBlue_hold.png'
@@ -84,7 +93,9 @@ ITEMS_LAYER = 1
 
 # Items
 ITEM_IMAGES = {'health': 'health_pack.png',
-               'shotgun': 'hitpro.png'}
+               'shotgun': 'hitpro.png',
+               'pistol': 'hitpro.png',
+               'boomshot': 'hitpro.png'}
 HEALTH_PACK_AMOUNT = 62
 BOB_RANGE = 10
 BOB_SPEED = 0.3
