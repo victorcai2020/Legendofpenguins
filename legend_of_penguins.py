@@ -41,7 +41,7 @@ def atributions():
 def welcome():
     print('WELCOME TO LEGEND OF PENGUINS PYTHON EDITION')
     print('Here are my github repositories: https://github.com/victorcai2020')
-    print('legin to github first: https://github.com/login')
+    print('login to github first: https://github.com/login')
 
 atributions()
 print('')
