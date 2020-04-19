@@ -18,7 +18,6 @@ WIDTH = 1024   # 16 * 64 or 32 * 32 or 64 * 16
 HEIGHT = 768  # 16 * 48 or 32 * 24 or 64 * 12
 FPS = 60
 TITLE = "LEGEND OF PENGUINS python edition"
-BGCOLOR = BROWN
 
 TILESIZE = 64
 GRIDWIDTH = WIDTH / TILESIZE
@@ -67,7 +66,6 @@ MUZZLE_FLASHES = ['smoke_01.png', 'smoke_02.png', 'smoke_03.png',
                   'smoke_04.png', 'smoke_05.png', 'smoke_06.png',
                   'smoke_07.png', 'smoke_08.png', 'smoke_09.png',
                   'smoke_10.png']
-SPLAT = 'splat green.png'
 FLASH_DURATION = 50
 DAMAGE_ALPHA = [i for i in range(0, 255, 55)]
 NIGHT_COLOR = (20, 20, 20)
@@ -90,12 +88,7 @@ BOB_RANGE = 10
 BOB_SPEED = 0.3
 
 # Sounds
-music = ['Happy Tune.wav']
-shuffle(music)
-BG_MUSIC = music[0]
-PLAYER_HIT_SOUNDS = ['penguin_RIP 03.wav', 'penguin_RIP 02.wav']
-ZOMBIE_MOAN_SOUNDS = None
-ZOMBIE_HIT_SOUNDS = ['pain/8.wav']
+BG_MUSIC = ['Happy Tune.wav']
 WEAPON_SOUNDS = {'machine': ['pistol.wav'],
                  'precision': ['shotgun.wav']}
 EFFECTS_SOUNDS = {'level_start': 'level_start.wav',
