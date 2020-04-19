@@ -42,7 +42,7 @@ class Player(pg.sprite.Sprite):
         self.rot = 0
         self.last_shot = 0
         self.health = PLAYER_HEALTH
-        self.weapon = 'obliviator'
+        self.weapon = 'boomshot'
         self.damaged = False
 
     def get_keys(self):

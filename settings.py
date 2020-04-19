@@ -67,14 +67,6 @@ WEAPONS['machine'] = {'bullet_speed': 500,
                       'damage': 75,
                       'bullet_size': 'lg',
                       'bullet_count': 1}
-WEAPONS['obliviator'] = {'bullet_speed': 600,
-                      'bullet_lifetime': 150,
-                      'rate': 1000,
-                      'kickback': 300,
-                      'spread': 0,
-                      'damage': 600,
-                      'bullet_size': 'xl',
-                      'bullet_count': 5}
 
 # Mob settings
 MOB_IMG = 'ManBlue_hold.png'
