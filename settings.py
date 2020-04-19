@@ -88,7 +88,9 @@ BOB_RANGE = 10
 BOB_SPEED = 0.3
 
 # Sounds
-BG_MUSIC = ['Happy Tune.wav']
+music = ['Happy Tune.wav']
+shuffle(music)
+BG_MUSIC = music[0]
 WEAPON_SOUNDS = {'machine': ['pistol.wav'],
                  'precision': ['shotgun.wav']}
 EFFECTS_SOUNDS = {'level_start': 'level_start.wav',

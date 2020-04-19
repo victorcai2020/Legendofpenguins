@@ -8,7 +8,7 @@ from tilemap import *
 
 def inplev():
     print('1. lop')
-    print('2. lop2')
+    print('2. lop2 (currently in construction, DON\'T USE)')
     print('3. legofpengs')
     print('4. easylop')
     print('')
@@ -184,6 +184,7 @@ class Game:
         # update portion of the game loop
         self.all_sprites.update()
         self.camera.update(self.player)
+        # game over?
         # player hits items
         hits = pg.sprite.spritecollide(self.player, self.items, False)
         for hit in hits:
@@ -208,6 +209,7 @@ class Game:
         # bullets hit mobs
         hits = pg.sprite.groupcollide(self.mobs, self.bullets, False, True)
         for mob in hits:
+            # hit.health -= WEAPONS[self.player.weapon]['damage'] * len(hits[hit])
             for bullet in hits[mob]:
                 mob.health -= bullet.damage
             mob.vel = vec(0, 0)
@@ -227,11 +229,14 @@ class Game:
 
     def draw(self):
         pg.display.set_caption("{:.2f}".format(self.clock.get_fps()))
+        # self.screen.fill(BGCOLOR)
         self.screen.blit(self.map_img, self.camera.apply(self.map))
+        # self.draw_grid()
         for sprite in self.all_sprites:
             if isinstance(sprite, Mob):
                 sprite.draw_health()
             self.screen.blit(sprite.image, self.camera.apply(sprite))
+        # pg.draw.rect(self.screen, WHITE, self.player.hit_rect, 2)
         if self.night:
             self.render_fog()
         # HUD functions
