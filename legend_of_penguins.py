@@ -7,14 +7,14 @@ from sprites import *
 from tilemap import *
 
 def inplev():
-    print('1. lop.tmx')
-    print('2. lop2.tmx')
-    print('3. legofpengs.tmx')
-    print('4. easylop.tmx')
+    print('1. lop')
+    print('2. lop2')
+    print('3. legofpengs')
+    print('4. easylop')
     print('')
-    print('WARNING: MAKE SURE to enter <mapname>.tmx')
     global inp
-    inp = input('enter level: ')
+    inp1 = input('enter level: ')
+    inp = inp1 + '.tmx'
 
 def version():
     print('Legend of penguins version 1.4.8')
