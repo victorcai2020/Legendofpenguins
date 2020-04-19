@@ -35,36 +35,20 @@ BARREL_OFFSET = vec(30, 0)
 # Weapon settings
 BULLET_IMG = 'bullet.png'
 WEAPONS = {}
-WEAPONS['boomshot'] = {'bullet_speed': 500,
-                     'bullet_lifetime': 500,
-                     'rate': 1000,
-                     'kickback': 200,
-                     'spread': 20,
-                     'damage': 5,
-                     'bullet_size': 'lg',
-                     'bullet_count': 50}
-WEAPONS['rocket'] = {'bullet_speed': 600,
-                      'bullet_lifetime': 1000000,
-                      'rate': 1000,
-                      'kickback': 300,
-                      'spread': 0,
-                      'damage': 300,
-                      'bullet_size': 'xl',
-                      'bullet_count': 1}
-WEAPONS['pistol'] = {'bullet_speed': 500,
-                      'bullet_lifetime': 1000,
-                      'rate': 250,
-                      'kickback': 150,
-                      'spread': 5,
-                      'damage': 60,
-                      'bullet_size': 'lg',
-                      'bullet_count': 1}
 WEAPONS['machine'] = {'bullet_speed': 500,
                       'bullet_lifetime': 1000,
                       'rate': 100,
                       'kickback': 150,
                       'spread': 5,
                       'damage': 75,
+                      'bullet_size': 'lg',
+                      'bullet_count': 1}
+WEAPONS['precision'] = {'bullet_speed': 500,
+                      'bullet_lifetime': 100000,
+                      'rate': 300,
+                      'kickback': 100,
+                      'spread': 0,
+                      'damage': 100,
                       'bullet_size': 'lg',
                       'bullet_count': 1}
 
@@ -100,10 +84,7 @@ ITEMS_LAYER = 1
 
 # Items
 ITEM_IMAGES = {'health': 'health_pack.png',
-               'shotgun': 'hitpro.png',
-               'pistol': 'hitpro.png',
-               'boomshot': 'hitpro.png',
-               'machine':'hitpro.png'}
+               'precicion': 'hitpro.png'}
 HEALTH_PACK_AMOUNT = 62
 BOB_RANGE = 10
 BOB_SPEED = 0.3
@@ -115,10 +96,7 @@ BG_MUSIC = music[0]
 PLAYER_HIT_SOUNDS = ['penguin_RIP 03.wav', 'penguin_RIP 02.wav']
 ZOMBIE_MOAN_SOUNDS = None
 ZOMBIE_HIT_SOUNDS = ['pain/8.wav']
-WEAPON_SOUNDS = {'boomshot': ['pistol.wav'],
-                 'rocket': ['shotgun.wav'],
-                 'pistol': ['pistol.wav'],
-                 'machine': ['pistol.wav'],
-                 'obliviator': ['shotgun.wav']}
+WEAPON_SOUNDS = {'machine': ['pistol.wav'],
+                 'precision': ['shotgun.wav']}
 EFFECTS_SOUNDS = {'level_start': 'level_start.wav',
                   'health_up': 'health_pack.wav',}

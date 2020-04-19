@@ -154,7 +154,7 @@ class Game:
                 Obstacle(self, tile_object.x, tile_object.y,
                          tile_object.width, tile_object.height)
 
-            if tile_object.name in ['health', 'rocket', 'pistol', 'boomshot', 'machine']:
+            if tile_object.name in ['health', 'precision']:
                 Item(self, obj_center, tile_object.name)
 
         self.camera = Camera(self.map.width, self.map.height)
@@ -192,22 +192,10 @@ class Game:
                 hit.kill()
                 self.effects_sounds['health_up'].play()
                 self.player.add_health(HEALTH_PACK_AMOUNT)
-            if hit.type == 'rocket':
+            if hit.type == 'precision':
                 hit.kill()
                 self.effects_sounds['health_up'].play()
-                self.player.weapon = 'rocket'
-            if hit.type == 'pistol':
-                hit.kill()
-                self.effects_sounds['health_up'].play()
-                self.player.weapon = 'pistol'
-            if hit.type == 'boomshot':
-                hit.kill()
-                self.effects_sounds['health_up'].play()
-                self.player.weapon = 'boomshot'
-            if hit.type == 'machine':
-                hit.kill()
-                self.effects_sounds['health_up'].play()
-                self.player.weapon = 'machine'
+                self.player.weapon = 'precision'
         # mobs hit player
         hits = pg.sprite.spritecollide(self.player, self.mobs, False, collide_hit_rect)
         for hit in hits:
