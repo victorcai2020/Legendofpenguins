@@ -6,55 +6,58 @@ from settings import *
 from sprites import *
 from tilemap import *
 
-def inplev():
-    print('1. lop')
-    print('2. lop2 (currently in construction, DON\'T USE)')
-    print('3. legofpengs')
-    print('4. easylop')
-    print('')
-    global inp
-    inp1 = input('enter level: ')
-    inp = inp1 + '.tmx'
-
-def version():
-    print('Legend of penguins version 1.4.8')
-
-def sorry():
-    print('sorry about the "game won" glitching. I an fixing it as soon as possible')
-
-def story():
-    print('There was a blooming city in the antarctica.')
-    print('It was called penguinland.')
-    print('One day, a shed sprung up beside penguinland.')
-    print('Inside were hunters.')
-    print('The hunters captured all the penguins. Except for one.')
-    print('That penguin was called pangwin')
-    print('Help pangwin kill all the hunters and rescue her fellows with:')
-    print('LEGEND OF PENGUINS python edition')
-
-def atributions():
-    print('Art editor: https://www.gimp.org/')
-    print('Tiled map editor: https://www.mapeditor.org/')
-    print('Font: https://www.kenney.nl/assets/kenney-fonts')
-    print('Art: https://www.kenney.nl/assets')
-    print("Music: https://opengameart.org/content/happy-tune")
 def welcome():
-    print('WELCOME TO LEGEND OF PENGUINS PYTHON EDITION')
-    print('Here are my github repositories: https://github.com/victorcai2020')
-    print('login to github first: https://github.com/login')
+    def inplev():
+        print('1. lop')
+        print('2. lop2 (currently in construction, DON\'T USE)')
+        print('3. legofpengs')
+        print('4. easylop')
+        print('')
+        global inp
+        inp1 = input('enter level: ')
+        inp = inp1 + '.tmx'
 
-atributions()
-print('')
-sorry()
-print('')
-version()
-print('')
+    def version():
+        print('Legend of penguins version 1.4.8')
+
+    def sorry():
+        print('sorry about the "game won" glitching. I an fixing it as soon as possible')
+
+    def story():
+        print('There was a blooming city in the antarctica.')
+        print('It was called penguinland.')
+        print('One day, a shed sprung up beside penguinland.')
+        print('Inside were hunters.')
+        print('The hunters captured all the penguins. Except for one.')
+        print('That penguin was called pangwin')
+        print('Help pangwin kill all the hunters and rescue her fellows with:')
+        print('LEGEND OF PENGUINS python edition')
+
+    def atributions():
+        print('Art editor: https://www.gimp.org/')
+        print('Tiled map editor: https://www.mapeditor.org/')
+        print('Font: https://www.kenney.nl/assets/kenney-fonts')
+        print('Art: https://www.kenney.nl/assets')
+        print("Music: https://opengameart.org/content/happy-tune")
+    def welcome():
+        print('WELCOME TO LEGEND OF PENGUINS PYTHON EDITION')
+        print('Here are my github repositories: https://github.com/victorcai2020')
+        print('login to github first: https://github.com/login')
+
+    atributions()
+    print('')
+    sorry()
+    print('')
+    version()
+    print('')
+    welcome()
+    print('')
+    print('story:')
+    story()
+    print('')
+    inplev()
+
 welcome()
-print('')
-print('story:')
-story()
-print('')
-inplev()
 
 # HUD functions
 def draw_player_health(surf, x, y, pct):
@@ -241,7 +244,7 @@ class Game:
             self.render_fog()
         # HUD functions
         draw_player_health(self.screen, 10, 10, self.player.health / PLAYER_HEALTH)
-        self.draw_text('Hunters: {}'.format(len(self.mobs)), self.hud_font, 30, BLACK  ,
+        self.draw_text('Hunters: {}'.format(len(self.mobs)), self.hud_font, 30, BLACK,
                        WIDTH - 10, 10, align="topright")
         if self.paused:
             self.screen.blit(self.dim_screen, (0, 0))
