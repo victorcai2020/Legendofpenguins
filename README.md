@@ -1,2 +1,2 @@
 # Legendofpenguins
- a python-pygame penguins game
+ a python-pygame penguin game
