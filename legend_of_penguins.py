@@ -195,10 +195,6 @@ class Game:
                 hit.kill()
                 self.effects_sounds['health_up'].play()
                 self.player.add_health(HEALTH_PACK_AMOUNT)
-            if hit.type == 'precision':
-                hit.kill()
-                self.effects_sounds['health_up'].play()
-                self.player.weapon = 'precision'
         # mobs hit player
         hits = pg.sprite.spritecollide(self.player, self.mobs, False, collide_hit_rect)
         for hit in hits:
