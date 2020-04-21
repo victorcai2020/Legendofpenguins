@@ -50,6 +50,14 @@ WEAPONS['precision'] = {'bullet_speed': 500,
                       'damage': 100,
                       'bullet_size': 'lg',
                       'bullet_count': 1}
+WEAPONS['rocket'] = {'bullet_speed': 1000,
+                      'bullet_lifetime': 100000,
+                      'rate': 300,
+                      'kickback': 100,
+                      'spread': 0,
+                      'damage': 300,
+                      'bullet_size': 'xl',
+                      'bullet_count': 1}
 
 # Mob settings
 MOB_IMG = 'ManBlue_hold.png'
