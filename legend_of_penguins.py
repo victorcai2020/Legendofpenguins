@@ -17,6 +17,15 @@ def welcome():
         inp1 = input('enter level: ')
         inp = inp1 + '.tmx'
 
+    def ctrl():
+        print('up: forwards')
+        print('down: backwards')
+        print('right or left: turn')
+        print('space: shoot')
+
+    def mtline():
+        print('')
+
     def version():
         print('Legend of penguins version 1.4.8')
 
@@ -45,16 +54,16 @@ def welcome():
         print('login to github first: https://github.com/login')
 
     atributions()
-    print('')
+    mtline()
     sorry()
-    print('')
+    mtline()
     version()
-    print('')
-    welcome()
-    print('')
+    mtline()
     print('story:')
     story()
-    print('')
+    mtline()
+    ctrl()
+    mtline()
     inplev()
 
 welcome()
