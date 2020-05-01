@@ -26,9 +26,6 @@ def welcome():
     def mtline():
         print('')
 
-    def version():
-        print('Legend of penguins version 1.4.8')
-
     def sorry():
         print('sorry about the "game won" glitching. I an fixing it as soon as possible')
 
@@ -56,8 +53,6 @@ def welcome():
     atributions()
     mtline()
     sorry()
-    mtline()
-    version()
     mtline()
     print('story:')
     story()
