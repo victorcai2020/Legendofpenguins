@@ -50,6 +50,7 @@ def welcome():
         print('Here are my github repositories: https://github.com/victorcai2020')
         print('login to github first: https://github.com/login')
 
+    welcome()
     atributions()
     mtline()
     sorry()
