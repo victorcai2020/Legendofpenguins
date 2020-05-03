@@ -22,6 +22,8 @@ def welcome():
         print('down: backwards')
         print('right or left: turn')
         print('space: shoot')
+        print('n: night')
+        print('p: pause')
 
     def mtline():
         print('')
@@ -265,7 +267,7 @@ class Game:
                 if event.key == pg.K_n:
                     self.night = not self.night
                 if event.key == pg.K_t:
-                    self.comline()
+                    self.cmdline()
 
     def show_start_screen(self):
         self.screen.fill(BLACK)
@@ -306,14 +308,23 @@ class Game:
                 if event.type == pg.KEYUP:
                     waiting = False
 
-    def comline(self):
+    def cmdline(self):
+        self.update()
         self.paused = True
         print('command line activated')
+        print('all commands start with cl/<command>')
+        print('list of commands:')
+        print('weapon = precision')
+        print('weapon = machine')
+        print('weapon = rocket')
+        print('killhunters')
+        print('command killhunters: enter special code')
         print('enter command:')
         i = input('>>> ')
         if i == 'cl/weapon = precision':
             self.player.weapon = 'precision'
             self.paused = False
+            self.update()
 
 # create the game object
 g = Game()
