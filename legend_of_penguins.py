@@ -30,14 +30,15 @@ def welcome():
         print('sorry about the "game won" glitching. I an fixing it as soon as possible')
 
     def story():
-        print('There was a blooming city in the antarctica.')
-        print('It was called penguinland.')
-        print('One day, a shed sprung up beside penguinland.')
-        print('Inside were hunters.')
-        print('The hunters captured all the penguins. Except for one.')
-        print('That penguin was called pangwin')
-        print('Help pangwin kill all the hunters and rescue her fellows with:')
-        print('LEGEND OF PENGUINS python edition')
+        print('story:')
+        print('    There was a blooming city in the antarctica.')
+        print('    It was called penguinland.')
+        print('    One day, a shed sprung up beside penguinland.')
+        print('    Inside were hunters.')
+        print('    The hunters captured all the penguins. Except for one.')
+        print('    That penguin was called pangwin')
+        print('    Help pangwin kill all the hunters and rescue her fellows with:')
+        print('    LEGEND OF PENGUINS python edition')
 
     def atributions():
         print('Art editor: https://www.gimp.org/')
@@ -55,7 +56,6 @@ def welcome():
     mtline()
     sorry()
     mtline()
-    print('story:')
     story()
     mtline()
     ctrl()
