@@ -5,18 +5,33 @@ from os import path
 from settings import *
 from sprites import *
 from tilemap import *
+import time
+from guizero import App, Combo, Text, CheckBox, ButtonGroup, PushButton, info
+
+def lvui():
+    def do_booking():
+        info("Level", '''You have chosen %s ''' % (level_choice.value))
+        info("Level", "Play well!")
+        info('How to play', "tip: when done chosing level, close the UI")
+        global inp
+        inp = None
+        if level_choice.value == 'level1':
+            inp = 'lop.tmx'
+        if level_choice.value == 'level2':
+            inp = 'lop2.tmx'
+        if level_choice.value == 'level3':
+            inp = 'legofpengs.tmx'
+        if level_choice.value == 'accsessible':
+            inp = 'easylop.tmx'
+
+    app = App(title="LEGEND OF PENGUINS: LEVELS", width=300, height=200, layout="grid")
+    level_choice = Combo(app, options=["level1", "level2(currently in construction DON'T USE)", "level3", "accsessible"], grid=[1,0], align="left")
+    level_description = Text(app, text="Which level?", grid=[0,0], align="left")
+    book_seats = PushButton(app, command=do_booking, text="START", grid=[1,3], align="left")
+
+    app.display()
 
 def welcome():
-    def inplev():
-        print('1. lop')
-        print('2. lop2 (currently in construction, DON\'T USE)')
-        print('3. legofpengs')
-        print('4. easylop')
-        print('')
-        global inp
-        inp1 = input('enter level: ')
-        inp = inp1 + '.tmx'
-
     def ctrl():
         print('up: forwards')
         print('down: backwards')
@@ -62,7 +77,7 @@ def welcome():
     mtline()
     ctrl()
     mtline()
-    inplev()
+    lvui()
 
 welcome()
 
@@ -266,8 +281,8 @@ class Game:
                     self.paused = not self.paused
                 if event.key == pg.K_n:
                     self.night = not self.night
-                if event.key == pg.K_t:
-                    self.cmdline()
+                #if event.key == pg.K_t:
+                    #self.cmdline()
 
     def show_start_screen(self):
         self.screen.fill(BLACK)
