@@ -6,10 +6,10 @@ from settings import *
 from sprites import *
 from tilemap import *
 import time
-from guizero import App, Combo, Text, CheckBox, ButtonGroup, PushButton, info
+from guizero import App, Combo, Text, PushButton, info
 
 def lvui():
-    def do_booking():
+    def start():
         info("Level", '''You have chosen %s ''' % (level_choice.value))
         info("Level", "Play well!")
         info('How to play', "tip: when done chosing level, close the UI")
@@ -21,13 +21,13 @@ def lvui():
             inp = 'lop2.tmx'
         if level_choice.value == 'level3':
             inp = 'legofpengs.tmx'
-        if level_choice.value == 'accsessible':
+        if level_choice.value == 'accessible':
             inp = 'easylop.tmx'
 
     app = App(title="LEGEND OF PENGUINS: LEVELS", width=300, height=200, layout="grid")
-    level_choice = Combo(app, options=["level1", "level2(currently in construction DON'T USE)", "level3", "accsessible"], grid=[1,0], align="left")
+    level_choice = Combo(app, options=["level1", "level2(currently in construction DON'T USE)", "level3", "accessible"], grid=[1,0], align="left")
     level_description = Text(app, text="Which level?", grid=[0,0], align="left")
-    book_seats = PushButton(app, command=do_booking, text="START", grid=[1,3], align="left")
+    book_seats = PushButton(app, command=start, text="START", grid=[1,3], align="left")
 
     app.display()
 
@@ -281,7 +281,7 @@ class Game:
                     self.paused = not self.paused
                 if event.key == pg.K_n:
                     self.night = not self.night
-                #if event.key == pg.K_t:
+                #if event.key == pg.K_c:
                     #self.cmdline()
 
     def show_start_screen(self):
